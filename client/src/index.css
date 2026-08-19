@@ -1,0 +1,53 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: light;
+}
+
+html, body, #root {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: 'Inter', system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #f8fafc;
+  color: #0f1a2e;
+}
+
+@layer components {
+  .btn {
+    @apply inline-flex items-center justify-center gap-2 rounded-lg px-4 py-2 text-sm font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-offset-2 disabled:opacity-60 disabled:cursor-not-allowed;
+  }
+  .btn-primary {
+    @apply btn bg-navy-900 text-white hover:bg-navy-800 focus:ring-navy-700;
+  }
+  .btn-secondary {
+    @apply btn bg-teal-500 text-white hover:bg-teal-600 focus:ring-teal-400;
+  }
+  .btn-outline {
+    @apply btn border border-navy-200 bg-white text-navy-800 hover:bg-navy-50 focus:ring-navy-300;
+  }
+  .btn-danger {
+    @apply btn bg-red-600 text-white hover:bg-red-700 focus:ring-red-500;
+  }
+  .btn-ghost {
+    @apply btn text-navy-700 hover:bg-navy-50 focus:ring-navy-300;
+  }
+  .card {
+    @apply rounded-xl border border-navy-100 bg-white shadow-sm;
+  }
+  .input {
+    @apply w-full rounded-lg border border-navy-200 bg-white px-3 py-2 text-sm text-navy-900 placeholder-navy-400 focus:border-teal-400 focus:outline-none focus:ring-2 focus:ring-teal-200;
+  }
+  .label {
+    @apply mb-1 block text-sm font-medium text-navy-700;
+  }
+  .badge {
+    @apply inline-flex items-center rounded-full px-2.5 py-0.5 text-xs font-semibold;
+  }
+}
